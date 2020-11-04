@@ -5,6 +5,7 @@ module MindBody
     class Client < Savon::Client
 
       def call(operation_name, locals = {}, &block)
+        puts "timmus operation_name: #{operation_name}, locals: #{locals.inspect}"
         # Inject the auth params into the request and setup the
         # correct request structure
         @globals.open_timeout(MindBody.configuration.open_timeout)
