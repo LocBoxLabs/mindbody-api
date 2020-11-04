@@ -21,6 +21,7 @@ module MindBody
     attr_accessor :log_level, :open_timeout, :read_timeout, :source_name, :source_key, :site_ids
 
     def initialize
+      puts "TIMMUS MBAPI initialize"
       @log_level = :debug
       @source_name = ENV['MINDBODY_SOURCE_NAME'] || ''
       @source_key = ENV['MINDBODY_SOURCE_KEY'] || ''
