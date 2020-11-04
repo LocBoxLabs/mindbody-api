@@ -11,6 +11,8 @@ module MindBody
         @globals.open_timeout(MindBody.configuration.open_timeout)
         @globals.read_timeout(MindBody.configuration.read_timeout)
         @globals.log_level(MindBody.configuration.log_level)
+        # {:message=>{"UserCredentials"=>{"Username"=>"_LocBox", "Password"=>"vWaJIyCHk+qJRJziCuXbYt0nO/w=", "SiteIDs"=>{"int"=>"3403"}}, "SearchText"=>"LocBox"}}
+        @globals.headers({"API-key" => "fakeid", "SiteID" => "3403"})
         locals = locals.has_key?(:message) ? locals[:message] : locals
         locals = fixup_locals(locals)
         params = {:message => {'Request' => auth_params.merge(locals)}}
