@@ -16,15 +16,12 @@ module MindBody
         params = { :message => { 'Request' => auth_params.merge(locals) } }
 
         if MindBody.configuration.api_key.present?
-          puts "TIMMUS API KEY FOUND"
           @globals.headers(
             {
               "API-key" => MindBody.configuration.api_key,
               "SiteID" => MindBody.configuration.site_id
             }
           )
-        else
-          puts "TIMMUS API KEY NOT FOUND"
         end
 
         # Run the request
