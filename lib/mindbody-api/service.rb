@@ -16,7 +16,6 @@ module MindBody
         end
 
         def client(globals = {})
-          puts "Timmus: client globals: #{globals.inspect}"
           @client ||= Client.new(globals)
         end
 

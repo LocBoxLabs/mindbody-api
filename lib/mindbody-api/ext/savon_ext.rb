@@ -4,7 +4,6 @@ module MindBody
       private
       # Defines a class-level SOAP operation.
       def define_class_operation(operation, *options)
-        puts "Timmus: define_class_operation: #{operation}"
         options = options.extract_options!
         params = prepare_params(options)
 
@@ -25,7 +24,6 @@ module MindBody
       # Defines an instance-level SOAP operation.
       # Defers to the class-level operation
       def define_instance_operation(operation, *options)
-        puts "Timmus: define_instance_operation: #{operation}"
         options = options.extract_options!
         params = prepare_params(options)
 
